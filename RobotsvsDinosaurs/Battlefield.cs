@@ -9,11 +9,8 @@ namespace RobotsvsDinosaurs
     public class Battlefield
     {
         //member variables
-
-
-
-
-
+        Fleet fleet = new Fleet();
+        Herd herd = new Herd();
 
 
         //constructor
@@ -22,31 +19,58 @@ namespace RobotsvsDinosaurs
 
         }
 
-
-
-
-
         //member methods
-        public void DinoAttack(Dinosaur dinosaur, Robot robot) 
+        public void DinoAttack()
         {
-            Console.WriteLine(Dinosaur.dinosaur.name + " has attacked " + Robot.robot.name);
-            RobotHealthDecrease(Robot robot);
+            Console.WriteLine(herd.dinoHerd[0].type + " has attacked " + fleet.robotFleet[0].name);
+            Console.ReadLine();
+            RobotHealthDecrease();
+            if (fleet.robotFleet[0].health == 0)
+            {
+                fleet.robotFleet.RemoveAt(0);
+            }
         }
-        public void RobotAttack(Robot robot, Dinosaur dinosaur) 
+        public void RobotAttack()
         {
-            Console.WriteLine(Robot.robot.name + " has attacked " + Dinosaur.dinosaur.name);
-            DinoHealthDecrease(Dinosaur dinosaur);
-        }
-            
-        
-        public void DinoHealthDecrease(Dinosaur dinosaur)
-        {
-            Dinosaur.dinosaur.health -= Dinosaur.dinosaur.attackPower;
-        }
-        public void RobotHealthDecrease(Robot robot)  //
-        {
-            Robot.robot.health -= Dinosaur.dinosaur.attackPower;
+            Console.WriteLine(fleet.robotFleet[0].name + " has attacked " + herd.dinoHerd[0].type);
+            Console.ReadLine();
+            DinoHealthDecrease();
+            if (herd.dinoHerd[0].health == 0)
+            {
+                herd.dinoHerd.RemoveAt(0);
+            }
         }
 
-    }
+
+        public void DinoHealthDecrease()
+        {
+            herd.dinoHerd[0].health -= fleet.robotFleet[0].attackPower;
+        }
+        public void RobotHealthDecrease()  
+        {
+            fleet.robotFleet[0].health -= herd.dinoHerd[0].attackPower;
+        }
+        public void RobotTurn()
+        {
+            RobotAttack();
+        }
+        public void DinosaurTurn()
+        {
+            DinoAttack();
+        }
+        
+
+        public void RunBattle()
+        {
+            
+            RobotTurn();
+            DinosaurTurn();
+
+        }
+
+      
+
+    }    
+
+    
 }
