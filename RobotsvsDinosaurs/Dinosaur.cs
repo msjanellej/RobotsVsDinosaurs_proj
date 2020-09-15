@@ -22,7 +22,7 @@ namespace RobotsvsDinosaurs
             this.type = type;
             this.health = 100;
             this.energy = 100;
-            this.attackPower = attackPower
+            this.attackPower = attackPower;
 
 
 

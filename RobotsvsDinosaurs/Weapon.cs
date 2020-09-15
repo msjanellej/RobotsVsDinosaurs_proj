@@ -9,17 +9,18 @@ namespace RobotsvsDinosaurs
     public class Weapon
     {
         //member variables
-        string sword;
-        string battleAx;
-        string hammer;
+        public string type;
+        
 
 
 
 
 
         //constructor
-        public Weapon()
+        public Weapon(string type)
         {
+            this.type = type;
+            
 
         }
 

@@ -9,7 +9,7 @@ namespace RobotsvsDinosaurs
     public class Fleet
     {
         //member variables
-        List<string> robotFleet = new List<string>;
+        List<Robot> robotFleet = new List<Robot>();
 
 
 
@@ -28,13 +28,13 @@ namespace RobotsvsDinosaurs
         //member methods
         public void CreateFleet(Robot robot)
         {
-            Robot robotOne  = new Robot("Luffy",10);
-            Robot robotTwo = new Robot ("Zoro", 10);
-            Dinosaur robotThree = new Dinosaur("Sanji", 10);
+            Robot luffy  = new Robot("Luffy",10, new Weapon("hammer" )); 
+            Robot zoro = new Robot ("Zoro", 10, new Weapon("sword"));
+            Robot sanji = new Robot("Sanji", 10, new Weapon("battleAx"));
 
-            robotFleet.Add(robotOne);
-            robotFleet.Add(robotTwo);
-            robotFleet.Add(robotThree);
+            robotFleet.Add(luffy);
+            robotFleet.Add(zoro);
+            robotFleet.Add(sanji); 
 
 
 
