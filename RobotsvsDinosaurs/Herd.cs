@@ -27,7 +27,7 @@ namespace RobotsvsDinosaurs
 
 
         //member methods
-        public void CreateHerd(Dinosaur dinosaur)
+        public void CreateHerd()
         {
             Dinosaur trex = new Dinosaur("trex",  10);
             Dinosaur triceratops = new Dinosaur("triceratops", 10);

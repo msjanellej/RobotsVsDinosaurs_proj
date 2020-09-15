@@ -11,6 +11,7 @@ namespace RobotsvsDinosaurs
         //member variables
         Fleet fleet = new Fleet();
         Herd herd = new Herd();
+        bool isBattleContinuing = true;
 
 
         //constructor
@@ -29,6 +30,10 @@ namespace RobotsvsDinosaurs
             {
                 fleet.robotFleet.RemoveAt(0);
             }
+            if (herd.dinoHerd[0].health == 0)
+            {
+                DisplayWinner();
+            }
         }
         public void RobotAttack()
         {
@@ -38,6 +43,10 @@ namespace RobotsvsDinosaurs
             if (herd.dinoHerd[0].health == 0)
             {
                 herd.dinoHerd.RemoveAt(0);
+            }
+            if (fleet.robotFleet[0].health == 0);
+            {
+                DisplayWinner();
             }
         }
 
@@ -58,13 +67,43 @@ namespace RobotsvsDinosaurs
         {
             DinoAttack();
         }
+        public bool DisplayWinner()
+        {
+            if (fleet.robotFleet[0] == null)
+            {
+                Console.WriteLine("The Dinosaurs are Victorious");
+                return false;
+                
+            }
+            if (herd.dinoHerd[0] == null)
+            {
+                Console.WriteLine("The Robots are Victorious");
+                return false;
+                
+            }
+            else
+            {
+                return true;
+            }
+           
+        }
         
 
         public void RunBattle()
         {
+            herd.CreateHerd();
+            fleet.CreateFleet();
             
-            RobotTurn();
-            DinosaurTurn();
+           while (isBattleContinuing ==  true)
+            {
+                
+                RobotTurn();
+                DinosaurTurn();
+            }
+            
+
+
+
 
         }
 

@@ -26,7 +26,7 @@ namespace RobotsvsDinosaurs
 
 
         //member methods
-        public void CreateFleet(Robot robot)
+        public void CreateFleet()
         {
             Robot luffy  = new Robot("Luffy",10, new Weapon("hammer" )); 
             Robot zoro = new Robot ("Zoro", 10, new Weapon("sword"));
