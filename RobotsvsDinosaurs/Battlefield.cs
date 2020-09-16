@@ -27,13 +27,17 @@ namespace RobotsvsDinosaurs
             {
                 DisplayWinner();
             }
-           if (herd.dinoHerd.Count != 0 && fleet.robotFleet.Count != 0)
+            else if (herd.dinoHerd[0].energy == 0)
+            {
+                herd.dinoHerd.RemoveAt(0);
+            }
+
+            
+           else if (herd.dinoHerd.Count != 0 && fleet.robotFleet.Count != 0)
             {
                 Console.WriteLine(herd.dinoHerd[0].type + " has attacked " + fleet.robotFleet[0].name);
                 herd.dinoHerd[0].AttackByDino(fleet.robotFleet[0]);
-                
                 herd.dinoHerd[0].EnergyLevelDecrease();
-                
                 Console.WriteLine(herd.dinoHerd[0].type + "'s energy has decreased to " + herd.dinoHerd[0].energy);
                 if (fleet.robotFleet[0].health == 0)
                 {
@@ -51,14 +55,16 @@ namespace RobotsvsDinosaurs
             {
                 DisplayWinner();
             }
+            else if (fleet.robotFleet[0].powerLevel == 0)
+            {
+                fleet.robotFleet.RemoveAt(0);
+            }
 
-            if (fleet.robotFleet.Count != 0 && herd.dinoHerd.Count != 0)
+            else if (fleet.robotFleet.Count != 0 && herd.dinoHerd.Count != 0)
             {
                 Console.WriteLine(fleet.robotFleet[0].name + " has attacked " + herd.dinoHerd[0].type);
                 fleet.robotFleet[0].AttackByRobot(herd.dinoHerd[0]);
-
                 fleet.robotFleet[0].PowerLevelDecrease();
-                
                 Console.WriteLine(fleet.robotFleet[0].name + "'s power level has decreased to " + fleet.robotFleet[0].powerLevel);
                 if (herd.dinoHerd[0].health == 0)
                 {

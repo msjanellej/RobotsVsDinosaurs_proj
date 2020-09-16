@@ -43,7 +43,7 @@ namespace RobotsvsDinosaurs
         //member methods
         public void AttackByRobot(Dinosaur dinosaur)
         {
-            dinosaur.health -= powerLevel;
+            dinosaur.health -= weapon.weaponAttackPower;
         }
         public void PowerLevelDecrease()
         {
