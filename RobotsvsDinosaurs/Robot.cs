@@ -17,12 +17,6 @@ namespace RobotsvsDinosaurs
         
         public Weapon weapon;
         
-        
-
-
-        
-
-
 
         //constructor
         public Robot(string name, int powerLevel, Weapon weapon)
@@ -31,15 +25,9 @@ namespace RobotsvsDinosaurs
             this.health = 50;
             this.powerLevel = powerLevel; 
             
-            this.weapon = weapon;
-           
+            this.weapon = weapon;           
             
         }
-
-
-
-
-
         //member methods
         public void AttackByRobot(Dinosaur dinosaur)
         {

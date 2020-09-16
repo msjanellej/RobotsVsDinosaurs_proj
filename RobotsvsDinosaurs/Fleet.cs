@@ -16,9 +16,6 @@ namespace RobotsvsDinosaurs
         public Weapon weapon;
 
 
-
-
-
         //constructor
 
         public Fleet()
@@ -38,6 +35,8 @@ namespace RobotsvsDinosaurs
                 robotFleet.Add(sanji); 
         }
 
+        //member methods
+
     }
 
 }     
@@ -48,7 +47,7 @@ namespace RobotsvsDinosaurs
 
 
 
-        //member methods
+        
 
     
 

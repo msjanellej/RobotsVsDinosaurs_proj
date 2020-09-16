@@ -13,13 +13,6 @@ namespace RobotsvsDinosaurs
         public string type;
         public int weaponAttackPower;
         
-        
-        
-
-        
-
-
-
 
 
         //constructor
@@ -28,16 +21,9 @@ namespace RobotsvsDinosaurs
            
             this.type = type;
             this.weaponAttackPower = weaponAttackPower;
-            
-
 
 
         }
-
-
-
-
-
         //member methods
         
 

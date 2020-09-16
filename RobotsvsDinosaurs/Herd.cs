@@ -12,10 +12,6 @@ namespace RobotsvsDinosaurs
         public List<Dinosaur> dinoHerd;
         public string[] typeOfAttack = new string[3];
 
-
-
-
-
         //constructor
         public Herd()
         {
@@ -26,16 +22,12 @@ namespace RobotsvsDinosaurs
 
         }
 
-
-
-
-
         //member methods
         public void CreateHerd()
         {
-            Dinosaur trex = new Dinosaur("trex",  10, typeOfAttack[1] );
-            Dinosaur triceratops = new Dinosaur("triceratops", 10, typeOfAttack[0]);
-            Dinosaur raptor = new Dinosaur("raptor",  10, typeOfAttack[2]);
+            Dinosaur trex = new Dinosaur("T-rex",  10, typeOfAttack[1] );
+            Dinosaur triceratops = new Dinosaur("Triceratops", 10, typeOfAttack[0]);
+            Dinosaur raptor = new Dinosaur("Raptor",  10, typeOfAttack[2]);
 
             dinoHerd.Add(trex);
             dinoHerd.Add(triceratops);
