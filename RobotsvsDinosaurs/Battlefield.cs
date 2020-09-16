@@ -122,9 +122,9 @@ namespace RobotsvsDinosaurs
             herd.CreateHerd();
             fleet.CreateFleet();
 
-            while (isBattleContinuing() ==  true)
+            while (isBattleContinuing())
             {
-                isBattleContinuing();
+                
                 RobotTurn();
                 DinosaurTurn();
             }

@@ -29,9 +29,9 @@ namespace RobotsvsDinosaurs
         public void CreateFleet()
         {    
                 
-                Robot luffy = new Robot("Luffy",100, 5, weaponList[0]);
-                Robot zoro = new Robot("Zoro", 100,5, weaponList[1]);
-                Robot sanji = new Robot("Sanji", 100,5, weaponList[2]);
+                Robot luffy = new Robot("Luffy",100, 10, weaponList[0]);
+                Robot zoro = new Robot("Zoro", 100,10, weaponList[1]);
+                Robot sanji = new Robot("Sanji", 100,10, weaponList[2]);
 
                 robotFleet.Add(luffy);
                 robotFleet.Add(zoro);
