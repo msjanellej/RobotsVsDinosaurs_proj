@@ -14,7 +14,7 @@ namespace RobotsvsDinosaurs
         public string name;
         public int health;
         public int powerLevel;
-        public int attackPower;
+        
         public Weapon weapon;
         
         
@@ -25,14 +25,14 @@ namespace RobotsvsDinosaurs
 
 
         //constructor
-        public Robot(string name, int powerLevel,  int attackPower, Weapon weapon)
+        public Robot(string name, int powerLevel, Weapon weapon)
         {
-            this.name = name;  //can I incorporate user input here in order to allow the user to pick the name of the robot.
+            this.name = name;  
             this.health = 50;
-            this.powerLevel = powerLevel; //Can I incorportae user input here.
-            this.attackPower = attackPower; // attackPower = ________ to move the attack power to the weapon
+            this.powerLevel = powerLevel; 
+            
             this.weapon = weapon;
-           //if I make these open to user input I could do a switch case for power level
+           
             
         }
 
@@ -41,5 +41,13 @@ namespace RobotsvsDinosaurs
 
 
         //member methods
+        public void AttackByRobot(Dinosaur dinosaur)
+        {
+            dinosaur.health -= powerLevel;
+        }
+        public void PowerLevelDecrease()
+        {
+            powerLevel -= 10;
+        }
     }
 }

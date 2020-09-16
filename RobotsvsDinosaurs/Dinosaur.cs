@@ -31,5 +31,13 @@ namespace RobotsvsDinosaurs
         }
 
         //member methods
+        public void AttackByDino(Robot robot)
+        {
+            robot.health -= attackPower;
+        }
+        public void EnergyLevelDecrease()
+        {
+            energy -= 10;
+        }
     }
 }

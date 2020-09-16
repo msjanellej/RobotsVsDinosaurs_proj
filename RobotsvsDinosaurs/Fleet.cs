@@ -11,7 +11,7 @@ namespace RobotsvsDinosaurs
         //member variables
 
         public List<Robot> robotFleet = new List<Robot>();
-        public List<Weapon> weaponList = new List<Weapon>() { new Weapon("sword"), new Weapon("knife"), new Weapon("battleAx") };
+        public List<Weapon> weaponList = new List<Weapon>() { new Weapon("sword", 10), new Weapon("knife", 10), new Weapon("battleAx", 10) };
         
         public Weapon weapon;
 
@@ -29,9 +29,9 @@ namespace RobotsvsDinosaurs
         public void CreateFleet()
         {    
                 
-                Robot luffy = new Robot("Luffy",100, 10, weaponList[0]);
-                Robot zoro = new Robot("Zoro", 100,10, weaponList[1]);
-                Robot sanji = new Robot("Sanji", 100,10, weaponList[2]);
+                Robot luffy = new Robot("Luffy",100, weaponList[0]);
+                Robot zoro = new Robot("Zoro", 100, weaponList[1]);
+                Robot sanji = new Robot("Sanji", 100, weaponList[2]);
 
                 robotFleet.Add(luffy);
                 robotFleet.Add(zoro);
