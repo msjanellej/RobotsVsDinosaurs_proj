@@ -23,16 +23,15 @@ namespace RobotsvsDinosaurs
 
         public Fleet()
         {
-            //Weapon weapon = new Weapon();
+            
         }
 
         public void CreateFleet()
-        {    // instantiate weapone
-                //pass weapon into the robot.
+        {    
                 
-                Robot luffy = new Robot("Luffy", 10, weaponList[0]);
-                Robot zoro = new Robot("Zoro", 10, weaponList[1]);
-                Robot sanji = new Robot("Sanji", 10, weaponList[2]);
+                Robot luffy = new Robot("Luffy",100, 10, weaponList[0]);
+                Robot zoro = new Robot("Zoro", 100,10, weaponList[1]);
+                Robot sanji = new Robot("Sanji", 100,10, weaponList[2]);
 
                 robotFleet.Add(luffy);
                 robotFleet.Add(zoro);

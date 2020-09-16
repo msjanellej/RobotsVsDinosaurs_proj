@@ -14,17 +14,20 @@ namespace RobotsvsDinosaurs
         public int health;
         public int energy;
         public int attackPower;
-        //string[] typeOfAttack = new string[3];
+        
+        public string attackType;
 
 
 
         //constructor
-        public Dinosaur(string type,  int attackPower)
+        public Dinosaur(string type,  int attackPower, string attackType )
         {
             this.type = type;
             this.health = 100;
             this.energy = 100;
             this.attackPower = attackPower;
+            this.attackType = attackType;
+
         }
 
         //member methods

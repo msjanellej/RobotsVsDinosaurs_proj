@@ -9,9 +9,7 @@ namespace RobotsvsDinosaurs
     public class Weapon
     {
         //member variables
-        //public string battleAx;
-        //public string knife;
-        //public string sword;
+        
         public string type;
         //public int weaponAttackPower;
         
@@ -46,10 +44,10 @@ namespace RobotsvsDinosaurs
 
 
         //member methods
-        public void ChooseWeapon()
-        {
-            return random.Next();
-        }
+        //public void ChooseWeapon()
+        //{
+        //    return random.Next();
+        //}
 
     }   
 }

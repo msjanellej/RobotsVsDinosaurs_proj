@@ -16,6 +16,7 @@ namespace RobotsvsDinosaurs
         public int powerLevel;
         public int attackPower;
         public Weapon weapon;
+        
         //Create weapons object here.
 
 
@@ -25,11 +26,11 @@ namespace RobotsvsDinosaurs
 
 
         //constructor
-        public Robot(string name,  int attackPower, Weapon weapon)
+        public Robot(string name, int powerLevel,  int attackPower, Weapon weapon)
         {
             this.name = name;
             this.health = 100;
-            this.powerLevel = 100;
+            this.powerLevel = powerLevel;
             this.attackPower = attackPower;
             this.weapon = weapon;
            

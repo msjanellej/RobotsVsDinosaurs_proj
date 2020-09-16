@@ -30,6 +30,7 @@ namespace RobotsvsDinosaurs
            if (herd.dinoHerd.Count != 0 && fleet.robotFleet.Count != 0)
             {
                 Console.WriteLine(herd.dinoHerd[0].type + " has attacked " + fleet.robotFleet[0].name);
+                EnergyLevelDecrease();
                 RobotHealthDecrease();
                 if (fleet.robotFleet[0].health == 0)
                 {
@@ -51,7 +52,7 @@ namespace RobotsvsDinosaurs
             if (fleet.robotFleet.Count != 0 && herd.dinoHerd.Count != 0)
             {
                 Console.WriteLine(fleet.robotFleet[0].name + " has attacked " + herd.dinoHerd[0].type);
-
+                EnergyLevelDecrease();
                 DinoHealthDecrease();
                 if (herd.dinoHerd[0].health == 0)
                 {
@@ -59,6 +60,14 @@ namespace RobotsvsDinosaurs
                 }
 
             }
+        }
+        public void PowerLevelDecrease()
+        {
+            fleet.robotFleet[0].powerLevel += -10; 
+        }
+        public void EnergyLevelDecrease()
+        {
+            herd.dinoHerd[0].energy += -10;
         }
 
 
