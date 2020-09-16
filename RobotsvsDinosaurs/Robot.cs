@@ -16,6 +16,11 @@ namespace RobotsvsDinosaurs
         public int powerLevel;
         public int attackPower;
         public Weapon weapon;
+        //Create weapons object here.
+
+
+        // weapon to be  before passed int
+        // allow the  weapon to be passed in.
 
 
 
@@ -27,6 +32,7 @@ namespace RobotsvsDinosaurs
             this.powerLevel = 100;
             this.attackPower = attackPower;
             this.weapon = weapon;
+           
             
         }
 

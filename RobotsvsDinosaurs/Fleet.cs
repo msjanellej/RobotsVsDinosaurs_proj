@@ -9,7 +9,11 @@ namespace RobotsvsDinosaurs
     public class Fleet
     {
         //member variables
+
         public List<Robot> robotFleet = new List<Robot>();
+        public List<Weapon> weaponList = new List<Weapon>() { new Weapon("sword"), new Weapon("knife"), new Weapon("battleAx") };
+        //public Random random = new Random();
+        public Weapon weapon;
 
 
 
@@ -19,25 +23,33 @@ namespace RobotsvsDinosaurs
 
         public Fleet()
         {
-
+            //Weapon weapon = new Weapon();
         }
+
+        public void CreateFleet()
+        {    // instantiate weapone
+                //pass weapon into the robot.
+                
+                Robot luffy = new Robot("Luffy", 10, weaponList[0]);
+                Robot zoro = new Robot("Zoro", 10, weaponList[1]);
+                Robot sanji = new Robot("Sanji", 10, weaponList[2]);
+
+                robotFleet.Add(luffy);
+                robotFleet.Add(zoro);
+                robotFleet.Add(sanji); 
+        }
+
+    }
+
+}     
+        
+            
+          
 
 
 
 
         //member methods
-        public void CreateFleet()
-        {
-            Robot luffy  = new Robot("Luffy",10, new Weapon("hammer" )); 
-            Robot zoro = new Robot ("Zoro", 10, new Weapon("sword"));
-            Robot sanji = new Robot("Sanji", 10, new Weapon("battleAx"));
 
-            robotFleet.Add(luffy);
-            robotFleet.Add(zoro);
-            robotFleet.Add(sanji); 
+    
 
-
-
-        }
-    }
-}

@@ -14,6 +14,8 @@ namespace RobotsvsDinosaurs
         public int health;
         public int energy;
         public int attackPower;
+        //string[] typeOfAttack = new string[3];
+
 
 
         //constructor
@@ -23,9 +25,6 @@ namespace RobotsvsDinosaurs
             this.health = 100;
             this.energy = 100;
             this.attackPower = attackPower;
-
-
-
         }
 
         //member methods
