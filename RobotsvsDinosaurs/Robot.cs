@@ -20,8 +20,7 @@ namespace RobotsvsDinosaurs
         //Create weapons object here.
 
 
-        // weapon to be  before passed int
-        // allow the  weapon to be passed in.
+        
 
 
 
@@ -29,7 +28,7 @@ namespace RobotsvsDinosaurs
         public Robot(string name, int powerLevel,  int attackPower, Weapon weapon)
         {
             this.name = name;
-            this.health = 10;
+            this.health = 50;
             this.powerLevel = powerLevel;
             this.attackPower = attackPower;
             this.weapon = weapon;

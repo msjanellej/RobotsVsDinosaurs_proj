@@ -33,9 +33,9 @@ namespace RobotsvsDinosaurs
         //member methods
         public void CreateHerd()
         {
-            Dinosaur trex = new Dinosaur("trex",  10, typeOfAttack[1] );
-            Dinosaur triceratops = new Dinosaur("triceratops", 10, typeOfAttack[0]);
-            Dinosaur raptor = new Dinosaur("raptor",  10, typeOfAttack[2]);
+            Dinosaur trex = new Dinosaur("trex",  5, typeOfAttack[1] );
+            Dinosaur triceratops = new Dinosaur("triceratops", 5, typeOfAttack[0]);
+            Dinosaur raptor = new Dinosaur("raptor",  5, typeOfAttack[2]);
 
             dinoHerd.Add(trex);
             dinoHerd.Add(triceratops);
