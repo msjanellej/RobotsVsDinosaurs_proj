@@ -11,7 +11,7 @@ namespace RobotsvsDinosaurs
         //member variables
         Fleet fleet = new Fleet();
         Herd herd = new Herd();
-        bool isBattleContinuing = true;
+        
 
 
         //constructor
@@ -23,30 +23,41 @@ namespace RobotsvsDinosaurs
         //member methods
         public void DinoAttack()
         {
-            Console.WriteLine(herd.dinoHerd[0].type + " has attacked " + fleet.robotFleet[0].name);
-            Console.ReadLine();
-            RobotHealthDecrease();
-            if (fleet.robotFleet[0].health == 0)
-            {
-                fleet.robotFleet.RemoveAt(0);
-            }
-            if (herd.dinoHerd[0].health == 0)
+            if (herd.dinoHerd.Count == 0)
             {
                 DisplayWinner();
             }
+           if (herd.dinoHerd.Count != 0 && fleet.robotFleet.Count != 0)
+            {
+                Console.WriteLine(herd.dinoHerd[0].type + " has attacked " + fleet.robotFleet[0].name);
+                RobotHealthDecrease();
+                if (fleet.robotFleet[0].health == 0)
+                {
+                    fleet.robotFleet.RemoveAt(0);
+                }
+            } 
+                
+            
+            
+            
         }
         public void RobotAttack()
         {
-            Console.WriteLine(fleet.robotFleet[0].name + " has attacked " + herd.dinoHerd[0].type);
-            Console.ReadLine();
-            DinoHealthDecrease();
-            if (herd.dinoHerd[0].health == 0)
-            {
-                herd.dinoHerd.RemoveAt(0);
-            }
-            if (fleet.robotFleet[0].health == 0);
+            if (fleet.robotFleet.Count == 0)
             {
                 DisplayWinner();
+            }
+
+            if (fleet.robotFleet.Count != 0 && herd.dinoHerd.Count != 0)
+            {
+                Console.WriteLine(fleet.robotFleet[0].name + " has attacked " + herd.dinoHerd[0].type);
+
+                DinoHealthDecrease();
+                if (herd.dinoHerd[0].health == 0)
+                {
+                    herd.dinoHerd.RemoveAt(0);
+                }
+
             }
         }
 
@@ -67,25 +78,31 @@ namespace RobotsvsDinosaurs
         {
             DinoAttack();
         }
-        public bool DisplayWinner()
+        public void  DisplayWinner()
         {
-            if (fleet.robotFleet[0] == null)
+            if (fleet.robotFleet.Count == 0)
             {
                 Console.WriteLine("The Dinosaurs are Victorious");
-                return false;
                 
             }
-            if (herd.dinoHerd[0] == null)
+            if (herd.dinoHerd.Count== 0)
             {
                 Console.WriteLine("The Robots are Victorious");
-                return false;
                 
+            }
+            
+           
+        }
+        public bool isBattleContinuing()
+        {
+            if (fleet.robotFleet.Count == 0 || herd.dinoHerd.Count == 0)
+            {
+                return false;
             }
             else
             {
                 return true;
             }
-           
         }
         
 
@@ -93,14 +110,14 @@ namespace RobotsvsDinosaurs
         {
             herd.CreateHerd();
             fleet.CreateFleet();
-            
-           while (isBattleContinuing ==  true)
+
+            while (isBattleContinuing() ==  true)
             {
-                
+                isBattleContinuing();
                 RobotTurn();
                 DinosaurTurn();
             }
-            
+           Console.ReadLine();
 
 
 
