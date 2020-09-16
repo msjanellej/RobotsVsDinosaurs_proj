@@ -29,7 +29,7 @@ namespace RobotsvsDinosaurs
         public Robot(string name, int powerLevel,  int attackPower, Weapon weapon)
         {
             this.name = name;
-            this.health = 100;
+            this.health = 10;
             this.powerLevel = powerLevel;
             this.attackPower = attackPower;
             this.weapon = weapon;
