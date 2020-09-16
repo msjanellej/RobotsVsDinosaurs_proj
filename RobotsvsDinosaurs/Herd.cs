@@ -10,11 +10,12 @@ namespace RobotsvsDinosaurs
     {
         //member variables
         public List<Dinosaur> dinoHerd;
-        public string[] typeOfAttack = new string[3];
+        public string[] typeOfAttack;
 
         //constructor
         public Herd()
         {
+            typeOfAttack = new string[3];
             dinoHerd = new List<Dinosaur>();
             typeOfAttack[0] = "headbutt";
             typeOfAttack[1] = "bite";

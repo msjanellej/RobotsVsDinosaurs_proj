@@ -9,15 +9,17 @@ namespace RobotsvsDinosaurs
     public class Battlefield
     {
         //member variables
-        Fleet fleet = new Fleet();
-        Herd herd = new Herd();
-        
+        public List<Dinosaur> dinoHerd;
+        Herd herd;     
+        Fleet fleet;
+
 
 
         //constructor
         public Battlefield()
         {
-
+            fleet = new Fleet();
+            herd = new Herd();
         }
 
         //member methods
@@ -25,7 +27,7 @@ namespace RobotsvsDinosaurs
         {
             if (herd.dinoHerd.Count == 0)
             {
-                DisplayWinner();
+                return;
             }
             else if (herd.dinoHerd[0].energy == 0)
             {
@@ -37,7 +39,8 @@ namespace RobotsvsDinosaurs
                 herd.dinoHerd[0].AttackByDino(fleet.robotFleet[0]);
                 herd.dinoHerd[0].EnergyLevelDecrease();
                 Console.WriteLine(herd.dinoHerd[0].type + "'s energy has decreased to " + herd.dinoHerd[0].energy);
-                Console.WriteLine(" ");
+                Console.WriteLine(fleet.robotFleet[0] + "'s health has decreased to " + fleet.robotFleet[0].health.ToString());
+                Console.WriteLine();
                 if (fleet.robotFleet[0].health == 0)
                 {
                     fleet.robotFleet.RemoveAt(0);
@@ -49,7 +52,7 @@ namespace RobotsvsDinosaurs
         {
             if (fleet.robotFleet.Count == 0)
             {
-                DisplayWinner();
+                return;
             }
             else if (fleet.robotFleet[0].powerLevel == 0)
             {
@@ -61,6 +64,7 @@ namespace RobotsvsDinosaurs
                 fleet.robotFleet[0].AttackByRobot(herd.dinoHerd[0]);
                 fleet.robotFleet[0].PowerLevelDecrease();
                 Console.WriteLine(fleet.robotFleet[0].name + "'s power level has decreased to " + fleet.robotFleet[0].powerLevel);
+                Console.WriteLine(herd.dinoHerd[0].type + "'s heath has decreased to " + herd.dinoHerd[0].health.ToString());
                 Console.WriteLine();
                 if (herd.dinoHerd[0].health == 0)
                 {
@@ -116,7 +120,8 @@ namespace RobotsvsDinosaurs
                 RobotTurn();
                 DinosaurTurn();
             }
-           Console.ReadLine();
+            DisplayWinner();
+            Console.ReadLine();
 
 
 
