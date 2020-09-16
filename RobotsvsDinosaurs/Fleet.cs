@@ -11,7 +11,7 @@ namespace RobotsvsDinosaurs
         //member variables
 
         public List<Robot> robotFleet = new List<Robot>();
-        public List<Weapon> weaponList = new List<Weapon>() { new Weapon("sword", 10), new Weapon("knife", 10), new Weapon("battleAx", 10) };
+        public List<Weapon> weaponList = new List<Weapon>() { new Weapon ("sword", 10), new Weapon("knife", 10), new Weapon("battleAx", 10) };
         
         public Weapon weapon;
 
